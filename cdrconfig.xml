@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<detail>
+  <cdr name="REC" desc="Rec CDR Voice CDR">
+    <filename>
+      <name>rec</name>
+      <name>lcarec</name>
+    </filename>
+    <element>
+      <field>RECsessionID</field>
+      <field>RECserialNO</field>
+      <field>RECtimeStamp</field>
+    </element>
+  </cdr>
+  <cdr name="Data" desc="DataCDR">
+    <filename>
+      <name>data</name>
+      <name>lcadata</name>
+    </filename>
+    <element>
+      <field>DATAsessionID</field>
+      <field>DATAserialNO</field>
+      <field>DATAtimeStamp1</field>
+      <field>DATAtimeStamp2</field>
+      <field>DATAtimeStamp3</field>
+      <field>DATAtimeStamp4</field>
+      <field>DATAtimeStamp5</field>
+      <field>DATAtimeStamp6</field>
+      <field>DATAtimeStamp7</field>
+      <field>ATAtimeStamp8</field>
+      <field>DATAtimeStamp9</field>
+      <field>DATAtimeStamp10</field>
+      <field>DATAtimeStamp11</field>
+      <field>DATAtimeStamp12</field>
+      <field>DATAtimeStamp13</field>
+      <field>DATAtimeStamp14</field>
+      <field>DATAtimeStamp15</field>
+      <field>DATAtimeStamp16</field>
+      <field>DATAtimeStamp17</field>
+      <field>DATAtimeStamp18</field>
+      <field>DATAtimeStamp19</field>
+    </element>
+  </cdr>
+  <cdr name="CPID" desc="CPID CDR\nTo Test CPID Feature">
+    <filename>
+      <name>cpid</name>
+      <name>lcacpid</name>
+    </filename>
+    <element>
+      <field color="red" desc="RECsessionID info1$RECsessionID info2">RECsessionID</field>
+      <field color="green" desc="RECserialNO info">RECserialNO</field>
+      <field desc="RECtimeStamp info">RECtimeStamp</field>
+      <field desc="NRofRG info" cpid="number">NRofRG</field>
+      <field desc="RG info" cpid="member">RG</field>
+      <field desc="MainProdKey info">MainProdKey</field>
+      <field color="cyan" desc="NRofCounter info" cpid="number">NRofCounter</field>
+      <field desc="counter info" cpid="member">counter</field>
+      <field desc="feeid info" cpid="member">feeid</field>
+      <field desc="RatingProdName info">RatingProdName</field>
+      <field desc="NRofTariff info" cpid="number">NRofTariff</field>
+      <field desc="" cpid="member">starttime</field>
+      <field desc="endtime info" cpid="member">endtime</field>
+      <field desc="flux info" cpid="member">flux</field>
+      <field desc="feeid info" cpid="member">feeid</field>
+      <field desc="tariffcode info" cpid="member">tariffcode</field>
+    </element>
+  </cdr>
+</detail>
