@@ -6,14 +6,10 @@
 
 #define XML_LOCATION "c:/cdrconfig.xml"
 
-CCdrXmlProcess::CCdrXmlProcess()
-{}
-
 int CCdrXmlProcess::init(VCCdrDefines* pvcCdrDefines)
 {
-    #ifdef DEBUG
-    qDebug()<<"CCdrXmlProcess::init";
-    #endif
+    LOG_FUNC(CCdrXmlProcess::init);
+
     CCdrBaseInfo BaseInfo;
 
     //打开xml配置文件

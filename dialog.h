@@ -40,9 +40,11 @@ private:
     QLabel      *qLabelDesc;
     QTableView  *qTable;
     QTabWidget  *qTab;
-    QComboBox   *qComboBox;
+    QComboBox   *qComboBox_selectSite;
+    QComboBox   *qComboBox_selectCDRType;
     QTextEdit   *qTextEdit;
     QList<QString> lsComboValues;
+    QList<QString> lsComboValuesSite;
 
 //消息响应处理函数
 private slots:
@@ -51,6 +53,7 @@ private slots:
     void onClickCloseTab(int);
     void onClickTableView(QString);
     void onComboBoxChange(int);
+    void onComboBoxChangeSite(int);
     void onTextEditChange();
 
 private:
@@ -60,6 +63,8 @@ private:
     void dropEvent(QDropEvent *);
     void dragEnterEvent(QDragEnterEvent *);
 
+    void initCdrConf();
+    int initCdr(VCCdrDefines* pvcCdrDefines, QString fileName);
 //话单配置文件处理
     VCCdrDefines vcCdrDefines;
 };

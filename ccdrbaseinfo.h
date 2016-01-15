@@ -8,7 +8,7 @@
 #define QT_NO_QLOCALE
 #define FAIL    -1
 #define SUCCESS 0
-#define COPYRIGHTINFO "Copyright:\nXiao Zhen\nCDR Reader v0.4\n2013.06.25"
+#define COPYRIGHTINFO "CDR Reader v0.5\n2016.1.14\n\nCopyright (C) 2016 Xiao Zhen\nThe MIT License (MIT)\nhttp://mit-license.org/"
 //#define DEBUG
 /*
 QDebug mydebug()
@@ -19,7 +19,15 @@ QDebug mydebug()
     return qdebug;
 }
 */
-
+class CLog
+{
+public:
+    CLog(QString sFuncName):sFuncName(sFuncName){qDebug() << "Enter Func:" << sFuncName;}
+    ~CLog(){qDebug() << "Exit Func:" << sFuncName;}
+private:
+    QString sFuncName;
+};
+#define LOG_FUNC(FuncName) CLog _log(#FuncName)
 
 class CCdrBaseInfo
 {

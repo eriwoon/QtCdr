@@ -3,8 +3,9 @@
 #include <QDebug>
 int main(int argc, char *argv[])
 {
-    qDebug()<<"Appstarted:";
+    LOG_FUNC(QApplication);
     QApplication a(argc, argv);
+
     Dialog w;
     w.resize(800,600);
     w.show();

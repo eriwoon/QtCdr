@@ -8,8 +8,6 @@
 class CCdrXmlProcess
 {
 public:
-    CCdrXmlProcess();
-
     //初始化
     static int init(VCCdrDefines*);
 

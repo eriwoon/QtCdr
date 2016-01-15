@@ -17,20 +17,20 @@ SOURCES += main.cpp\
     ccdrdefine.cpp \
     ccdrdata.cpp \
     ccdrbaseinfo.cpp \
-    ccdrxmlprocess.cpp \
     ccdrtableviewext.cpp
 
 HEADERS  += \
     ccdrdefine.h \
     ccdrdata.h \
     ccdrbaseinfo.h \
-    ccdrxmlprocess.h \
     dialog.h \
     ccdrtableviewext.h
 
 FORMS    += dialog.ui
 
 RESOURCES +=
+
+QMAKE_CXXFLAGS += -std=c++11
 
 RC_FILE = myapp.rc
 
