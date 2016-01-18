@@ -85,6 +85,19 @@ Dialog::Dialog(QWidget *parent) :
 
     //设置图形展示
     this->setDialogLayout();
+
+    //重新打开上次的配置文件
+    QString fileName = readSettings(LASTCONFIGUREFILENAME, "-").toString();
+    if(fileName != "-")
+    {
+        this->lsComboValuesSite;
+        for(int i = 0; i < this->lsComboValuesSite.size(); i ++)
+        {
+            if(fileName == this->lsComboValuesSite[i])
+                this->qComboBox_selectSite->setCurrentIndex(i);//todo
+        }
+    }
+
 }
 
 Dialog::~Dialog()
@@ -436,6 +449,7 @@ void Dialog::initCdrConf()
 void Dialog::onComboBoxChangeSite(int)
 {
     LOG_FUNC(Dialog::onComboBoxChangeSite);
+    qTab->clear();
     qTextEdit->clear();
     //加载xml文件中的话单配置
     //if(CCdrXmlProcess::init(&vcCdrDefines) == FAIL)
@@ -449,6 +463,9 @@ void Dialog::onComboBoxChangeSite(int)
     //加载成功后,增加下拉框设置
     else
     {
+        //保存当前的值到settings中去
+        saveSettings(LASTCONFIGUREFILENAME,QVariant(this->lsComboValuesSite[this->qComboBox_selectSite->currentIndex()]));
+
         qComboBox_selectCDRType->clear();
         lsComboValues.clear();
         lsComboValues.push_back("-");

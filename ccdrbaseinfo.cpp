@@ -1,5 +1,5 @@
 ﻿#include "ccdrbaseinfo.h"
-
+#include <QSettings>
 CCdrBaseInfo::CCdrBaseInfo()
 {
     #ifdef DEBUG
@@ -68,4 +68,17 @@ QString CCdrBaseInfo::cdr() const
 {
     QString re("cdr");
     return re;
+}
+
+
+QVariant readSettings(const QString& key, const QVariant& defaultValue = QVariant())
+{
+    QSettings settings(CORPORATION, APPLICATION);
+    return settings.value(key, defaultValue);
+}
+
+void saveSettings(const QString& key, const QVariant& value)
+{
+    QSettings settings(CORPORATION, APPLICATION);
+    settings.setValue(key, value);
 }

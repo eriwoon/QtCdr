@@ -19,10 +19,10 @@ class CCdrData : public QAbstractTableModel
 {
 public:
     CCdrData(QObject *parent = 0)
-        :QAbstractTableModel(parent){}
+        :QAbstractTableModel(parent), pcCdrDefine(0){}
     
     CCdrData(CCdrDefine* pcCdrDefine, QString sReadLine, QObject *parent = 0)
-        :QAbstractTableModel(parent)
+        :QAbstractTableModel(parent), pcCdrDefine(pcCdrDefine)
     {
         initCdrData(pcCdrDefine, sReadLine);
     //    this->re

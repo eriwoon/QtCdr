@@ -9,6 +9,9 @@
 #define FAIL    -1
 #define SUCCESS 0
 #define COPYRIGHTINFO "CDR Reader v0.5\n2016.1.14\n\nCopyright (C) 2016 Xiao Zhen\nThe MIT License (MIT)\nhttp://mit-license.org/"
+#define CORPORATION "xiaozhen"
+#define APPLICATION "qtcdr"
+#define LASTCONFIGUREFILENAME "lastConfigureFileName"
 //#define DEBUG
 /*
 QDebug mydebug()
@@ -28,6 +31,9 @@ private:
     QString sFuncName;
 };
 #define LOG_FUNC(FuncName) CLog _log(#FuncName)
+
+QVariant readSettings(const QString&, const QVariant&);
+void saveSettings(const QString&, const QVariant&);
 
 class CCdrBaseInfo
 {
